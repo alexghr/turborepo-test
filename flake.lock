@@ -1,0 +1,62 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1659295566,
+        "narHash": "sha256-ICqvf+Y782V3G2XHe6m43dBkTzv0Y1DPgXcffoNqa2Q=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "33ab71dafbaa6674243830e29b11e8b674f49a70",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "master",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1659446231,
+        "narHash": "sha256-hekabNdTdgR/iLsgce5TGWmfIDZ86qjPhxDg/8TlzhE=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "eabc38219184cc3e04a974fe31857d8e0eac098d",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-21.11",
+        "type": "indirect"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "turbo": "turbo"
+      }
+    },
+    "turbo": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1667379348,
+        "narHash": "sha256-8VsxVvexZxlZ8FNgZaDVlrHsyl5y6hD9KkX0YdN/ky8=",
+        "owner": "alexghr",
+        "repo": "turbo.nix",
+        "rev": "2bd66daf54b41ed9182937d3c7e6658e423e5866",
+        "type": "github"
+      },
+      "original": {
+        "owner": "alexghr",
+        "ref": "v1.6.3",
+        "repo": "turbo.nix",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
