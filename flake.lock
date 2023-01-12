@@ -42,16 +42,16 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1667379348,
-        "narHash": "sha256-8VsxVvexZxlZ8FNgZaDVlrHsyl5y6hD9KkX0YdN/ky8=",
+        "lastModified": 1673555121,
+        "narHash": "sha256-jMeG/cTzevwz8i34ztslMEfbvHId21jObnFGy3D9A+s=",
         "owner": "alexghr",
         "repo": "turbo.nix",
-        "rev": "2bd66daf54b41ed9182937d3c7e6658e423e5866",
+        "rev": "6d8d000f3bcf75203c2f168cb80d019fc9950380",
         "type": "github"
       },
       "original": {
         "owner": "alexghr",
-        "ref": "v1.6.3",
+        "ref": "v1.7.0",
         "repo": "turbo.nix",
         "type": "github"
       }

@@ -2,7 +2,7 @@
 {
   description = "test";
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/master";
-  inputs.turbo.url = "github:alexghr/turbo.nix/v1.6.3";
+  inputs.turbo.url = "github:alexghr/turbo.nix/v1.7.0";
 
   outputs = { self, nixpkgs, turbo }:
     let
@@ -15,7 +15,14 @@
           turbo.packages.${system}.default
         ];
         shellHook = with pkgs; ''
+          TMPDIR="$PWD/.corepack"
+          mkdir -p "$TMPDIR"
+          COREPACK_DIR="$(mktemp --tmpdir="$TMPDIR" --directory)"
+          echo "Enabling Corepack. Install directory: $COREPACK_DIR"
+          corepack enable --install-directory "$COREPACK_DIR"
+
           export TURBO_BINARY_PATH="${turbo.packages.${system}.default}/bin/turbo"
+          export PATH="$PATH:$COREPACK_DIR"
         '';
       };
     };

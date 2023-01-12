@@ -1,11 +1,22 @@
-setup direnv
+This requires Nix with flakes support.
 
-https://github.com/nix-community/nix-direnv/
+Reproduction steps:
 
-then allow it to execute `.envrc`
-
+```shell
+nix develop
+pnpm install
+pnpm run dev
 ```
-direnv allow
-```
 
-now you should have `$TURBO_BINARY_PATH` defined and you should be able to `npm install` cleanly
+The error I'm getting:
+
+```shell
+$ pnpm run dev
+
+> turborepo-test@1.0.0 dev /home/ag/code/pers/turbo.nix-test
+> turbo run dev --parallel
+
+thread 'main' panicked at 'Failed to execute turbo.: Os { code: 2, kind: NotFound, message: "No such file or directory" }', crates/turborepo/src/main.rs:23:10
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+ ELIFECYCLE  Command failed with exit code 101.
+```
